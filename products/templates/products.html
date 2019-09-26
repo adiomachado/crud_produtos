@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<ul class="list-group list-group-flush">
+    {% for product in products %}
+    <a href="{% url 'update_product' product.id %}">
+        <li class="list-group-item"> {{ product.description}}</li>
+    </a>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'create_product' %}" class="btn btn-primary new">Novo Produto</a>
+
+{% endblock %}
