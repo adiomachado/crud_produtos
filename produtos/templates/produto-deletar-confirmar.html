@@ -7,8 +7,8 @@
     <form method="post">
         {% csrf_token %}
         <h3>Tem certeza que deseja remover o {{ produto.descricao }}</h3>
-        <button type="submit" title="Confirmar" alt="Confirmar" class="btn btn-warning">Confirmar</button>
-        <a href="{% url 'alterar_produto' produto.id %}" title="Cancelar" alt="Cancelar" class="btn btn-danger">Cancelar</a>
+        <button type="submit" title="Confirmar" alt="Confirmar" accesskey="O" class="btn btn-warning">C<span class="accessKey">o</span>nfirmar</button>
+        <a href="{% url 'alterar_produto' produto.id %}" title="Cancelar" alt="Cancelar" accesskey="C" class="btn btn-danger"><span class="accessKey">C</span>ancelar</a>
 
     </form>
 

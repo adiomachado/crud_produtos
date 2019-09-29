@@ -14,10 +14,10 @@
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy}}
-        <button type="submit" title="Salvar" alt="Salvar" class="btn btn-success">Salvar</button>
+        <button type="submit" title="Salvar" alt="Salvar" accesskey="S" class="btn btn-success"><span class="accessKey">S</span>alvar</button>
         {% if produto %}
-        <a href="{% url 'deletar_produto' produto.id %}" title="Deletar" alt="Deletar" class="btn btn-danger">Deletar</a>
+        <a href="{% url 'deletar_produto' produto.id %}" title="Deletar" alt="Deletar" accesskey="L" class="btn btn-danger">De<span class="accessKey">l</span>etar</a>
         {% endif %}
-        <a href="{% url 'listar_produtos' %}" title="Voltar" alt="Voltar" class="btn btn-second float-right">Voltar</a>
+        <a href="{% url 'listar_produtos' %}" title="Voltar" alt="Voltar" accesskey="V" class="btn btn-second float-right"><span class="accessKey">V</span>oltar</a>
     </form>
 {% endblock %}
