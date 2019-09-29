@@ -12,6 +12,7 @@
     {% if product %}
     <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Deletar</a>
     {% endif %}
+    <a href="{% url 'list_products' %}" class="btn btn-second float-right">Voltar</a>
 </form>
 
 {% endblock %}

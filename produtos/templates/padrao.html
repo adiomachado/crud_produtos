@@ -5,26 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Django People</title>
+    <title>Gerenciamento de Produtos</title>
 
     <style type="text/css">
+
         .uniara {
             position: absolute;
             right: 5%;
             top: 30%;
         }
 
-        hr {
-            border: 0;
-            padding-bottom: 0.5em;
-        }
-
-        .new {
-            margin-top: 1em;
-        }
-
         .navbar {
-            background-color: #000000;
+            background-color: #222222;
         }
 
         .footer {
@@ -37,26 +29,36 @@
             font-size: 13px;
         }
 
+        .new {
+            margin-top: 1em;
+        }
+
+        hr {
+            border: 0;
+            padding-bottom: 0.5em;
+        }
+
         .footer a {
             text-decoration: none;
         }
+
     </style>
 
 </head>
 <body>
 <nav class="navbar navbar-dark primary-color">
-    <a class="navbar-brand" href="">
-        <img src="https://i.ibb.co/MMrFZTy/logo-transparent.png" height="30" alt="crud logo">
+    <a class="navbar-brand" href="{% url 'listar_produtos' %}">
+        <img src="https://i.ibb.co/MMrFZTy/logo.png" height="30" alt="crud logo">
     </a>
-    <img src="https://yata.ostr.locaweb.com.br/5bfadb1c0997ee93f6b9f7359e2e513cbf187e2fe9849f35e5df43d0475b7867"
-         class="uniara" height="30" alt="uniara logo">
+    <a href="https://m.uniara.com.br/cursos/presencial/graduacao/sistemas-de-informacao/" target="_blank">
+        <img src="https://yata.ostr.locaweb.com.br/5bfadb1c0997ee93f6b9f7359e2e513cbf187e2fe9849f35e5df43d0475b7867"
+             class="uniara" height="30" alt="uniara logo">
+    </a>
 </nav>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-8">
-            <h1 class="mt-2">Lista de Produtos</h1>
-            <hr class="mt-0 mb-4">
             {% block content %}
             {% endblock %}
         </div>
@@ -78,7 +80,7 @@
                 <!-- Content -->
                 <h5 class="text-uppercase">Gerenciamento de Produtos</h5>
                 <p>Sistema feito com 'Python' e 'Django'.</p>
-                <p>Professor: Felipe Dalillo.</p>
+                <p>Professor: Felipe Diniz Dallilo.</p>
 
             </div>
             <!-- Grid column -->
@@ -93,13 +95,13 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">Rafael Veloso 04716-059</a>
+                        <a href="https://github.com/rsveloso" target="_blank">Rafael Veloso 04716-059</a>
                     </li>
                     <li>
-                        <a href="#">Vinicius Vieira 04716-024</a>
+                        <a href="https://github.com/viniciusUniara" target="_blank">Vinicius Vieira 04716-024</a>
                     </li>
                     <li>
-                        <a href="#">Julio Kasahara 04717-550</a>
+                        <a href="https://github.com/juliokasahara" target="_blank">Julio Kasahara 04717-550</a>
                     </li>
                     <li>
                         <a href="#">Lucas Dosvaldo 05213-051</a>
@@ -107,27 +109,17 @@
                 </ul>
 
             </div>
-            <!-- Grid column -->
 
             <!-- Grid column -->
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h6 class="text-uppercase">Git Hub </h6>
+                <h6 class="text-uppercase">Git Projeto </h6>
 
                 <ul class="list-unstyled">
                     <li>
                         <a href="https://github.com/rsveloso/crud_produtos" target ="_blank">Link Git</a>
                     </li>
-<!--                    <li>
-                        <a href="#">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#">Link 4</a>
-                    </li>-->
                 </ul>
 
             </div>

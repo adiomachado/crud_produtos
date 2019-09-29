@@ -1,0 +1,23 @@
+{% extends 'padrao.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    {% if produto.id %}
+    <h1 class="mt-2">Alterar Produto</h1>
+    {% else %}
+    <h1 class="mt-2">Novo Produto</h1>
+    {% endif %}
+    <hr class="mt-0 mb-4">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <button type="submit" title="Salvar" alt="Salvar" class="btn btn-success">Salvar</button>
+        {% if produto %}
+        <a href="{% url 'deletar_produto' produto.id %}" title="Deletar" alt="Deletar" class="btn btn-danger">Deletar</a>
+        {% endif %}
+        <a href="{% url 'listar_produtos' %}" title="Voltar" alt="Voltar" class="btn btn-second float-right">Voltar</a>
+    </form>
+{% endblock %}

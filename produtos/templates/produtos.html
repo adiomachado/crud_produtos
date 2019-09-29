@@ -1,0 +1,22 @@
+{% extends 'padrao.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <h1 class="mt-2">Lista de Produtos</h1>
+    <hr class="mt-0 mb-4">
+
+    <ul class="list-group list-group-flush">
+        {% for produto in produtos %}
+                <li class="list-group-item">
+                    <a href="{% url 'alterar_produto' produto.id %}">
+                        {{ produto.descricao }}
+                    </a>
+                </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'criar_produto' %}" title="Novo Produto" alt="Novo Produto" class="btn btn-primary new">Novo produto</a>
+
+{% endblock %}

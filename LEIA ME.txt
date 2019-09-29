@@ -1,1 +1,23 @@
+#startar a aplicação
 python manage.py runserver
+
+# criar app
+django-admin startapp <nome>
+registra no settings
+
+#criar as tabelas e aplica
+python manage.py makemigrations
+python manage.py migrate
+
+#iniciar a env
+cd venv
+cd Scrpts
+ digitar activate
+
+#criar usuario admin
+python manage.py createsuperuser
+admin
+enter
+senha
+repete a senha
+acessar localhost:8000/admin
